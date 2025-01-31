@@ -1,4 +1,3 @@
-import style from './main.module.css';
 import Head from './head';
 import Directions from './directions';
 

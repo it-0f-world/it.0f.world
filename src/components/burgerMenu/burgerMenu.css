@@ -65,17 +65,13 @@
   font-size: 1.6rem;
 }
 .bm-item a {
-  display: block;
+  display: flex;
   padding: .32em 0;
   color: white;
   filter: drop-shadow(2px 3px 2px #0000007e);
 }
 .bm-item a:hover {
   color: #20b8b6;
-}
-.bm-item-icon {
-  font-size: 2.1rem;
-  margin-bottom: -.4rem;
 }
 /* Styling of overlay */
 .bm-overlay {

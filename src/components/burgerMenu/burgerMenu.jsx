@@ -14,15 +14,15 @@ const BurgerMenu = ({ closeMenu, isOpen, ...props }) => {
             </NavLink>
           </div>
           <div>
-            <NavLink to="/" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCodesandboxLogoLight className='bm-item-icon'/> About us</NavLink>
-            <NavLink to="/services" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCode className='bm-item-icon'/> Services</NavLink>
-            <NavLink to="/portfolio" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiQrCode className='bm-item-icon'/> Portfolio</NavLink>
-            <NavLink to="/articles" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiBookBookmarkLight className='bm-item-icon'/> Articles</NavLink>
-            <NavLink to="/contacts" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiMapPinSimpleArea className='bm-item-icon'/> Contacts</NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCodesandboxLogoLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/> About us</NavLink>
+            <NavLink to="/services" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCode className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/> Services</NavLink>
+            <NavLink to="/portfolio" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/> Portfolio</NavLink>
+            <NavLink to="/articles" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiBookBookmarkLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/> Articles</NavLink>
+            <NavLink to="/contacts" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiMapPinSimpleArea className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/> Contacts</NavLink>
           </div>
           <div className='bm-address'>
-            <a href="mailto:info@it.0f.world"><FiMail style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> info@it.0f.world</a>
-            <a href="callto:+79278500916"><FiPhoneCall style={{ fontSize: '1.5em', marginBottom: '-.2em'}} /> +7 927 850 0916</a>
+            <a href="mailto:info@it.0f.world"><FiMail className="text-[24px] mb-[-0.5] mr-[0.3rem]" /> info@it.0f.world</a>
+            <a href="callto:+79278500916"><FiPhoneCall className="text-[24px] mb-[-0.5] mr-[0.3rem]" /> +7 927 850 0916</a>
           </div>
         </Menu>
     );
