@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import BurgerMenu from './components/burgerMenu/burgerMenu';
-import style from './App.module.css';
 import './assets/fonts/fonts.css';
 import Main from "./pages/main/main";
 import Services from "./pages/services/services";
@@ -21,17 +20,16 @@ const App = () => {
   };
 
   return (
-    <div className={style.root}>
+    <>
       <BurgerMenu
         pageWrapId={"page-wrap"}
         outerContainerId={"outer-container"}
-        className={style.burger}
         isOpen={menuOpen}
         onStateChange={handleStateChange}
         closeMenu={closeMenu}
       />
-      <div id="outer-container" className={style.app}>
-        <main className={style.main} id="page-wrap">
+      <div id="outer-container" className='flex flex-col mx-auto'>
+        <main className="flex-[1_0_auto] min-h-screen overflow-auto bg-[#1f1f1f]" id="page-wrap">
           <Routes>
             <Route path="/" element={<Main closeMenu={closeMenu} />} />
             <Route path="/services" element={<Services closeMenu={closeMenu} />} />
@@ -41,7 +39,7 @@ const App = () => {
           </Routes>
         </main>
       </div>
-    </div>
+    </>
   );
 };
 

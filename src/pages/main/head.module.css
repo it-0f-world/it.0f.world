@@ -26,6 +26,12 @@
 }
 
 .header {
+    position: initial;
+    display: flex;
+}
+
+.centered {
+    position: initial;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,4 +52,12 @@
 
 .description {
     font-size: 1.5rem;
+}
+
+.buttons {
+    position: initial;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    justify-self: flex-end;
 }
