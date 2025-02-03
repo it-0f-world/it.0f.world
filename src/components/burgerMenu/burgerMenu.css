@@ -68,7 +68,7 @@
   display: flex;
   padding: .32em 0;
   color: white;
-  filter: drop-shadow(2px 3px 2px #0000007e);
+  filter: drop-shadow(2px 3px 2px #000000bd);
 }
 .bm-item a:hover {
   color: #20b8b6;

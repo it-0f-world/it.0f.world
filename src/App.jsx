@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import BurgerMenu from './components/burgerMenu/burgerMenu';
 import './assets/fonts/fonts.css';
+
+
 import Main from "./pages/main/main";
 import Services from "./pages/services/services";
 import Portfolio from "./pages/portfolio/portfolio";
@@ -18,6 +20,8 @@ const App = () => {
   const closeMenu = () => {
     setMenuOpen(false);
   };
+
+  
 
   return (
     <>

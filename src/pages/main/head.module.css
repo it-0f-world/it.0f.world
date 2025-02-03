@@ -82,12 +82,21 @@
 }
 
 .button {
+    display: flex;
+    text-align: left;
     border-radius: 2px;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    background-color: #344b8690;
+    background-color: #344b86ab;
     font-size: 1.5rem;
     padding: .4em 1.6em;
-    text-shadow: 1px 1px 3px #000;
+    text-shadow: 1px 1px 4px #000;
+    clip-path: polygon(8px 0%, calc(100% - 8px) 0%, 100% 8px, 100% 100%, calc(100% - 8px) 100%, 8px 100%, 0 100%, 0 0);
+    transition: all 0.2s ease-in-out;
+    animation: shimmerEffect 1.5s infinite;
+}
+
+.button:hover {
+    transform: translate(-0.25rem, -0.25rem);
+    background-color: #344b86d7;
 }
 
 .bottom {
@@ -100,6 +109,10 @@
     text-shadow: 1px 1px 4px #000;
 }
 
+.title h1, .description p {
+    filter: drop-shadow(2px 3px 2px #000000);
+}
+
 .title {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -108,3 +121,12 @@
 .description {
     font-size: 1.5rem;
 }
+
+@keyframes shimmerEffect {
+    0% {
+      background-position: -300px 0;
+    }
+    100% {
+      background-position: 300px 0;
+    }
+  }
