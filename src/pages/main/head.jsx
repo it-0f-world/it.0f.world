@@ -3,6 +3,7 @@ import VideoBG from './media/videoplayback.mp4';
 import VideoPoster from './media/poster.webp';
 import { PiCode, PiQrCode, PiMapPinSimpleArea, PiBookBookmarkLight, PiAperture, PiChartDonut, PiTranslate } from "react-icons/pi";
 import { useTranslation } from 'react-i18next';
+import languageSelector from '../../components/languageSelector/languageSelector';
 
 export default function Head() {
     const { t } = useTranslation();
@@ -22,6 +23,7 @@ export default function Head() {
             <header className={style.header}>
                 <div className={style.top}>
                     <button className={style.button1}><PiTranslate className={style.icon} /></button>
+                    
                 </div>
                 <div className={style.center}>
                     <div className={style.left} />
