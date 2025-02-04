@@ -1,19 +1,20 @@
-import React from 'react'
-import style from './languageSelector.module.css'
+import React from 'react';
+import style from './languageSelector.module.css';
 import { useTranslation } from 'react-i18next';
 
 const languages = [
     { code: 'en', name: 'English' },
     { code: 'ru', name: 'Русский' },
     { code: 'ar', name: 'العربية' }
-]
+];
 
-const changeLanguage = () => {}
+const LanguageSelector = () => {
+    const { i18n } = useTranslation();
 
+    const changeLanguage = (code) => {
+        i18n.changeLanguage(code);
+    };
 
-
-const languageSelector = () => {
-    const { t, i18n } = useTranslation();
     return (
         <div className={style.container}>
             {languages.map((lang) => {
@@ -25,8 +26,10 @@ const languageSelector = () => {
                     >
                         {lang.name}
                     </button>
-                )
+                );
             })}
         </div>
-    )
-}
+    );
+};
+
+export default LanguageSelector;
