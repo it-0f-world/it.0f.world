@@ -28,17 +28,17 @@ export default function Head() {
                 <div className={style.center}>
                     <div className={style.left} />
                     <div className={style.slogan}>
-                        <h1 className={style.title}>{t("title")}</h1>
-                        <p className={style.description}>{"< Information Technologies Development, Artistic  & Technical Design />"}</p>
+                        <h1 className={style.title}>{t("mainHeadTitle")}</h1>
+                        <p className={style.description}>{t("mainHeadDescription")}</p>
                     </div>
                     <div className={style.right}>
                         <div className={style.buttons}>
-                            <button className={`${style.button}`}><PiCode className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>Coding</button>
-                            <button className={style.button}><PiAperture className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>Design</button>
-                            <button className={style.button}><PiChartDonut className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>Promotion</button>
-                            <button className={style.button}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>Portfolio</button>
-                            <button className={style.button}><PiBookBookmarkLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>Articles</button>
-                            <button className={style.button}><PiMapPinSimpleArea className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>Contacts</button>
+                            <button className={`${style.button}`}><PiCode className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadCoding")}</button>
+                            <button className={style.button}><PiAperture className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadDesign")}</button>
+                            <button className={style.button}><PiChartDonut className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadPromotion")}</button>
+                            <button className={style.button}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadPortfolio")}</button>
+                            <button className={style.button}><PiBookBookmarkLight className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadArticles")}</button>
+                            <button className={style.button}><PiMapPinSimpleArea className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadContacts")}</button>
                         </div>
                     </div>
                 </div>

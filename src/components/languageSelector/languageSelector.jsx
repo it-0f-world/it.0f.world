@@ -1,11 +1,11 @@
-import React from 'react';
+import { React, useEffect} from 'react';
 import style from './languageSelector.module.css';
 import { useTranslation } from 'react-i18next';
 
 const languages = [
-    { code: 'en', name: 'English' },
-    { code: 'ru', name: 'Русский' },
-    { code: 'ar', name: 'العربية' }
+    { code: 'eng', name: 'English' },
+    { code: 'rus', name: 'Русский' },
+    { code: 'ara', name: 'العربية' }
 ];
 
 const LanguageSelector = () => {

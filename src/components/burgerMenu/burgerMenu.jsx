@@ -4,8 +4,10 @@ import { PiCodesandboxLogoLight, PiCircuitry, PiQrCode, PiMapPinSimpleArea, PiBo
 import { FiPhoneCall, FiMail } from "react-icons/fi";
 import './burgerMenu.css';
 import LogoWhite from '../../assets/logo/logo-unicorn.svg';
+import { useTranslation } from 'react-i18next';
 
 const BurgerMenu = ({ closeMenu, isOpen, ...props }) => {
+  const { t } = useTranslation();
     return (
         <Menu  isOpen={isOpen} {...props}>
           <div className='bm-logo'>
@@ -14,11 +16,11 @@ const BurgerMenu = ({ closeMenu, isOpen, ...props }) => {
             </NavLink>
           </div>
           <div>
-            <NavLink to="/" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCodesandboxLogoLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/> About us</NavLink>
-            <NavLink to="/services" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCircuitry className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/> Services</NavLink>
-            <NavLink to="/portfolio" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/> Portfolio</NavLink>
-            <NavLink to="/articles" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiBookBookmarkLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/> Articles</NavLink>
-            <NavLink to="/contacts" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiMapPinSimpleArea className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/> Contacts</NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCodesandboxLogoLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("burgerMenuAbout")}</NavLink>
+            <NavLink to="/services" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCircuitry className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("burgerMenuServices")}</NavLink>
+            <NavLink to="/portfolio" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("burgerMenuPortfolio")}</NavLink>
+            <NavLink to="/articles" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiBookBookmarkLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("burgerMenuArticles")}</NavLink>
+            <NavLink to="/contacts" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiMapPinSimpleArea className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("burgerMenuContacts")}</NavLink>
           </div>
           <div className='bm-address'>
             <a href="mailto:info@it.0f.world"><FiMail className="text-[24px] mb-[-0.5] mr-[0.3rem]" /> info@it.0f.world</a>
