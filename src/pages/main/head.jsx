@@ -4,9 +4,36 @@ import VideoPoster from './media/poster.webp';
 import { PiCode, PiQrCode, PiMapPinSimpleArea, PiBookBookmarkLight, PiAperture, PiChartDonut, PiTranslate } from "react-icons/pi";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../../components/languageSelector/languageSelector';
+import { AnimatePresence, motion } from 'motion/react'
+import { useState } from "react"
+
+function ModalLanguages ({ onClose }) {
+    return (
+        <motion.div
+            className={style.overlay}
+            onClick={onClose}
+            initial={{opacity: 0 }}
+            animate={{opacity: 1 }}
+            exit={{opacity: 0 }}
+        >
+            <motion.div
+                className={style.modalCard}
+                onClick={onClose}
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition ={{ type: "spring", stiffness: 400, damping: 25 }}
+            >
+                <LanguageSelector />
+                <button onClick={onClose}>Close</button>
+            </motion.div>
+        </motion.div>
+    )
+}
 
 export default function Head() {
     const { t } = useTranslation();
+    const [isOpen, setIsOpen] = useState(false)
     return (
         <div className={style.container}>
             <div className={style.videoWrapper}>
@@ -22,8 +49,10 @@ export default function Head() {
             </div>
             <header className={style.header}>
                 <div className={style.top}>
-                    <button className={style.button1}><PiTranslate className={style.icon} /></button>
-                    <LanguageSelector />
+                    <button onClick={() => setIsOpen(true)}><PiTranslate className={style.icon} />{`show here chosen language`}</button>
+                    <AnimatePresence>
+                        { isOpen && <ModalLanguages onClose={() => setIsOpen(false)} /> }
+                    </AnimatePresence>
                 </div>
                 <div className={style.center}>
                     <div className={style.left} />

@@ -26,6 +26,7 @@
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.2",
     "i18next-http-backend": "^3.0.2",
+    "motion": "^12.4.0",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.10.0",
     "postcss": "^8.5.1",
