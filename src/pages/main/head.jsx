@@ -4,10 +4,10 @@ import VideoPoster from './media/poster.webp';
 import { PiCode, PiQrCode, PiMapPinSimpleArea, PiBookBookmarkLight, PiAperture, PiChartDonut, PiTranslate } from "react-icons/pi";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../../components/languageSelector/languageSelector';
-import { AnimatePresence, motion } from 'motion/react'
-import { useState } from "react"
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from "react";
 
-function ModalLanguages ({ onClose }) {
+function ModalLanguages ({ onClose, onLanguageChange }) {
     return (
         <motion.div
             className={style.overlay}
@@ -24,7 +24,7 @@ function ModalLanguages ({ onClose }) {
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition ={{ type: "spring", stiffness: 400, damping: 25 }}
             >
-                <LanguageSelector />
+                <LanguageSelector onLanguageChange={onLanguageChange} />
                 <button onClick={onClose}>Close</button>
             </motion.div>
         </motion.div>
@@ -33,7 +33,9 @@ function ModalLanguages ({ onClose }) {
 
 export default function Head() {
     const { t } = useTranslation();
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentLanguage, setCurrentLanguage] = useState('English'); // Default language
+
     return (
         <div className={style.container}>
             <div className={style.videoWrapper}>
@@ -49,9 +51,12 @@ export default function Head() {
             </div>
             <header className={style.header}>
                 <div className={style.top}>
-                    <button onClick={() => setIsOpen(true)}><PiTranslate className={style.icon} />{`show here chosen language`}</button>
+                    <button onClick={() => setIsOpen(true)}>
+                        <PiTranslate className={style.icon} />
+                        {currentLanguage} {/* Display the current language name */}
+                    </button>
                     <AnimatePresence>
-                        { isOpen && <ModalLanguages onClose={() => setIsOpen(false)} /> }
+                        { isOpen && <ModalLanguages onClose={() => setIsOpen(false)} onLanguageChange={setCurrentLanguage} /> }
                     </AnimatePresence>
                 </div>
                 <div className={style.center}>
