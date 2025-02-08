@@ -2,6 +2,7 @@ import style from './head.module.css';
 import VideoBG from './media/videoplayback.mp4';
 import VideoPoster from './media/poster.webp';
 import { PiCode, PiQrCode, PiMapPinSimpleArea, PiBookBookmarkLight, PiAperture, PiChartDonut, PiTranslate } from "react-icons/pi";
+import { IoCloseSharp } from "react-icons/io5";
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../../components/languageSelector/languageSelector';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -16,17 +17,19 @@ function ModalLanguages({ onClose, onLanguageChange }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <motion.div
-                className={style.modalCard}
-                onClick={onClose}
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                transition={{ type: "spring", stiffness: 400, damping: 25 }}
-            >
-                <LanguageSelector onLanguageChange={onLanguageChange} />
-
-            </motion.div>
+            <div className={style.modalCardWrapper}>
+                <button onClick={onClose} className={style.closeModal}><IoCloseSharp /></button>
+                <motion.div
+                    className={style.modalCard}
+                    onClick={onClose}
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.9, opacity: 0 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                >
+                    <LanguageSelector onLanguageChange={onLanguageChange} />
+                </motion.div>
+            </div>
         </motion.div>
     )
 }

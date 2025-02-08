@@ -36,6 +36,11 @@ const languages = [
     { code: 'ces', name: 'Czech' },
 ];
 
+// Filtered list of languages (Slavyanian)
+const slavyanianLanguages = languages.filter(
+    (lang) => lang.code === 'rus' || lang.code === 'pol' || lang.code === 'ces'
+);
+
 const LanguageSelector = ({ onLanguageChange }) => {
     const { t, i18n } = useTranslation();
 
