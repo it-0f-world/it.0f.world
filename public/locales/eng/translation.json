@@ -1,15 +1,13 @@
 {
-    "burgerMenuAbout": "About us",
-    "burgerMenuServices": "Services",
-    "burgerMenuPortfolio": "Portfolio",
-    "burgerMenuArticles": "Articles",
-    "burgerMenuContacts": "Contacts",
+    "aboutUs": "About us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "articles": "Articles",
+    "contacts": "Contacts",
+    "languageSelector": "Select Your Language",
     "mainHeadTitle": "[ SPACE OF IT DECISIONS ]",
     "mainHeadDescription": "< Information Technologies Development, Artistic  & Technical Design />",
-    "mainHeadCoding": "Coding",
-    "mainHeadDesign": "Design",
-    "mainHeadPromotion": "Promotion",
-    "mainHeadPortfolio": "Portfolio",
-    "mainHeadArticles": "Articles",
-    "mainHeadContacts": "Contacts"
+    "coding": "Coding",
+    "design": "Design",
+    "promotion": "Promotion"
 }

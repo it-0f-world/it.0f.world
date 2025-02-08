@@ -16,11 +16,11 @@ const BurgerMenu = ({ closeMenu, isOpen, ...props }) => {
             </NavLink>
           </div>
           <div>
-            <NavLink to="/" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCodesandboxLogoLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("burgerMenuAbout")}</NavLink>
-            <NavLink to="/services" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCircuitry className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("burgerMenuServices")}</NavLink>
-            <NavLink to="/portfolio" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("burgerMenuPortfolio")}</NavLink>
-            <NavLink to="/articles" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiBookBookmarkLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("burgerMenuArticles")}</NavLink>
-            <NavLink to="/contacts" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiMapPinSimpleArea className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("burgerMenuContacts")}</NavLink>
+            <NavLink to="/" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCodesandboxLogoLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("aboutUs")}</NavLink>
+            <NavLink to="/services" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCircuitry className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("services")}</NavLink>
+            <NavLink to="/portfolio" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("portfolio")}</NavLink>
+            <NavLink to="/articles" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiBookBookmarkLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("articles")}</NavLink>
+            <NavLink to="/contacts" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiMapPinSimpleArea className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("contacts")}</NavLink>
           </div>
           <div className='bm-address'>
             <a href="mailto:info@it.0f.world"><FiMail className="text-[24px] mb-[-0.5] mr-[0.3rem]" /> info@it.0f.world</a>

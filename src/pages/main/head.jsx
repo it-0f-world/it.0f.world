@@ -7,14 +7,14 @@ import LanguageSelector from '../../components/languageSelector/languageSelector
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from "react";
 
-function ModalLanguages ({ onClose, onLanguageChange }) {
+function ModalLanguages({ onClose, onLanguageChange }) {
     return (
         <motion.div
             className={style.overlay}
             onClick={onClose}
-            initial={{opacity: 0 }}
-            animate={{opacity: 1 }}
-            exit={{opacity: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
         >
             <motion.div
                 className={style.modalCard}
@@ -22,10 +22,10 @@ function ModalLanguages ({ onClose, onLanguageChange }) {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                transition ={{ type: "spring", stiffness: 400, damping: 25 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
             >
                 <LanguageSelector onLanguageChange={onLanguageChange} />
-                <button onClick={onClose}>Close</button>
+
             </motion.div>
         </motion.div>
     )
@@ -51,12 +51,12 @@ export default function Head() {
             </div>
             <header className={style.header}>
                 <div className={style.top}>
-                    <button onClick={() => setIsOpen(true)}>
+                    <button onClick={() => setIsOpen(true)} className={style.changeLanguage}>
                         <PiTranslate className={style.icon} />
                         {currentLanguage} {/* Display the current language name */}
                     </button>
                     <AnimatePresence>
-                        { isOpen && <ModalLanguages onClose={() => setIsOpen(false)} onLanguageChange={setCurrentLanguage} /> }
+                        {isOpen && <ModalLanguages onClose={() => setIsOpen(false)} onLanguageChange={setCurrentLanguage} />}
                     </AnimatePresence>
                 </div>
                 <div className={style.center}>
@@ -67,12 +67,12 @@ export default function Head() {
                     </div>
                     <div className={style.right}>
                         <div className={style.buttons}>
-                            <button className={`${style.button}`}><PiCode className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadCoding")}</button>
-                            <button className={style.button}><PiAperture className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadDesign")}</button>
-                            <button className={style.button}><PiChartDonut className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadPromotion")}</button>
-                            <button className={style.button}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadPortfolio")}</button>
-                            <button className={style.button}><PiBookBookmarkLight className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadArticles")}</button>
-                            <button className={style.button}><PiMapPinSimpleArea className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]'/>{t("mainHeadContacts")}</button>
+                            <button className={`${style.button}`}><PiCode className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("coding")}</button>
+                            <button className={style.button}><PiAperture className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("design")}</button>
+                            <button className={style.button}><PiChartDonut className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("promotion")}</button>
+                            <button className={style.button}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("portfolio")}</button>
+                            <button className={style.button}><PiBookBookmarkLight className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("articles")}</button>
+                            <button className={style.button}><PiMapPinSimpleArea className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("contacts")}</button>
                         </div>
                     </div>
                 </div>

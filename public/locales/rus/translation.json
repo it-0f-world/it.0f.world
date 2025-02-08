@@ -1,15 +1,13 @@
 {
-    "burgerMenuAbout": "О Компании",
-    "burgerMenuServices": "Услуги",
-    "burgerMenuPortfolio": "Портфолио",
-    "burgerMenuArticles": "Статьи",
-    "burgerMenuContacts": "Контакты",
+    "aboutUs": "О Компании",
+    "services": "Услуги",
+    "portfolio": "Портфолио",
+    "articles": "Статьи",
+    "contacts": "Контакты",
+    "languageSelector": "Выберите Ваш Язык",
     "mainHeadTitle": "[ ПРОСТРАНСТВО IT РЕШЕНИЙ ]",
     "mainHeadDescription": "< Разработка Информационно-Вычислительных Программ, Художественный и Технический Дизайн />",
-    "mainHeadCoding": "Кодинг",
-    "mainHeadDesign": "Дизайн",
-    "mainHeadPromotion": "Промоушн",
-    "mainHeadPortfolio": "Портфолио",
-    "mainHeadArticles": "Статьи",
-    "mainHeadContacts": "Контакты"
+    "coding": "Кодинг",
+    "design": "Дизайн",
+    "promotion": "Промоушн"
 }
