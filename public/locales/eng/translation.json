@@ -4,10 +4,19 @@
     "portfolio": "Portfolio",
     "articles": "Articles",
     "contacts": "Contacts",
-    "languageSelector": "Select Your Language",
-    "mainHeadTitle": "[ SPACE OF IT DECISIONS ]",
-    "mainHeadDescription": "< Information Technologies Development, Artistic  & Technical Design />",
     "coding": "Coding",
     "design": "Design",
-    "promotion": "Promotion"
+    "promotion": "Promotion",
+    "languageSelector": "Choose Your Language by Geographic Origin",
+    "regionLanguages": "Select your language by linguistic families",
+    "africa": "Africa",
+    "europe": "Europe",
+    "middleEastAndCentralAsia": "Asia. Middle East and Central",
+    "southAsia": "Asia. South",
+    "eastAsia": "Asia. East",
+    "southEastAsia": "Asia. South-East",
+    "afroAsiatic": "Afro-Asiatic",
+    "nigerCongo": "Niger-Congo",
+    "mainHeadTitle": "[ SPACE OF IT DECISIONS ]",
+    "mainHeadDescription": "< Information Technologies Development, Artistic  & Technical Design />"
 }

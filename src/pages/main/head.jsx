@@ -16,16 +16,17 @@ function ModalLanguages({ onClose, onLanguageChange }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
         >
             <div className={style.modalCardWrapper}>
                 <button onClick={onClose} className={style.closeModal}><IoCloseSharp /></button>
                 <motion.div
                     className={style.modalCard}
-                    onClick={onClose}
                     initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.9, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                    onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
                 >
                     <LanguageSelector onLanguageChange={onLanguageChange} />
                 </motion.div>

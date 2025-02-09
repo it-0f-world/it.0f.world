@@ -2,11 +2,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: auto; /* Enables scrolling when content overflows */
+    max-height: 94vh; /* Limits the height to the viewport height */
+    width: 100%; /* Ensures the wrapper spans the full width of the viewport */
+    box-sizing: border-box; /* Prevents padding/margin from affecting dimensions */
 }
+
 .container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
-    justify-items: stretch; /* Ensures buttons stretch to fill their column */
+    grid-template-columns: repeat(4, 1fr);
+    /* Creates 4 equal-width columns */
+    justify-items: stretch;
+    /* Ensures buttons stretch to fill their column */
     gap: .5rem;
 }
 
@@ -17,6 +24,7 @@
 
 .default {
     border: 1px solid #ffffff7e;
+    width: 100%;
 }
 
 .default:hover {
@@ -26,4 +34,69 @@
 .active {
     border: 2px solid #20b8b6;
     background-color: transparent;
+    width: 100%;
+}
+
+.questionContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordionButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    outline: none;
+    padding: 1rem;
+    border: 1px solid #f3f4f67a;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    overflow: hidden;
+    position: relative; /* For z-index control */
+    z-index: 1; /* Ensure it stays above the description */
+    transition: all 0.2s ease-in-out;
+}
+
+.accordionButton:hover {
+    background-color: #f0f0f04f;
+}
+
+.activeAccordionButton {
+    background-color: #f0f0f00c;
+    border-top: 1px solid #344b86; /* Keep top border */
+    border-left: 1px solid #344b86; /* Keep left border */
+    border-right: 1px solid #344b86; /* Keep right border */
+    border-bottom: none; /* Remove bottom border */
+    overflow: auto;
+    border-bottom-left-radius: 0; /* Remove bottom-left radius */
+    border-bottom-right-radius: 0; /* Remove bottom-right radius */
+    z-index: 2; /* Ensure active state stays above */
+}
+
+.description {
+    padding: 0 1rem .5rem;
+    background-color: #f0f0f00c;
+    border-radius: 0.5rem;
+    margin-top: -.75rem;
+    overflow: hidden;
+    border: 1px solid #344b86; /* Add a border for separation */
+    border-top: none; /* Remove top border to connect with the button */
+    border-radius: 0 0 0.5rem 0.5rem; /* Rounded corners only at the bottom */
+    margin-top: 0; /* Remove negative margin */
+    overflow: hidden;
+}
+
+.listItem {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: stretch;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+
+.family {
+    padding-top: .5rem;
 }
