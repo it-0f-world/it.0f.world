@@ -32,7 +32,6 @@ const RegionAccordion = ({ region, activeRegionId, setActiveRegionId, changeLang
                         transition={{ duration: 0.3 }}
                         className={style.description}
                     >
-                        <p>{region.description}</p>
                         {region.families.map(family => (
                             <FamilyList
                                 key={family.id}

@@ -36,5 +36,7 @@ export const languages = [
     { code: 'zul', name: 'Zulu' },
     { code: 'swe', name: 'Svenska' },
     { code: 'bul', name: 'Български' },
-    { code: 'pan', name: 'ਪੰਜਾਬੀ' }
+    { code: 'pan', name: 'ਪੰਜਾਬੀ' },
+    { code: 'ukr', name: 'Українська'},
+    { code: 'dan', name: 'Dansk'}
 ];
