@@ -38,5 +38,9 @@ export const languages = [
     { code: 'bul', name: 'Български' },
     { code: 'pan', name: 'ਪੰਜਾਬੀ' },
     { code: 'ukr', name: 'Українська'},
-    { code: 'dan', name: 'Dansk'}
+    { code: 'dan', name: 'Dansk'},
+    { code: 'uzb', name: "O'zbek tili"},
+    { code: 'kir', name: 'Кыргыз тили' },
+    { code: 'kaz', name: 'Қазақ тілі' },
+    { code: 'tgk', name: 'Тоҷикӣ' }
 ];

@@ -15,7 +15,7 @@ const BurgerMenu = ({ closeMenu, isOpen, ...props }) => {
               <img src={LogoWhite} alt="Logo" />
             </NavLink>
           </div>
-          <div>
+          <div className='grid gap-[3px]'>
             <NavLink to="/" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCodesandboxLogoLight className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("aboutUs")}</NavLink>
             <NavLink to="/services" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiCircuitry className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("services")}</NavLink>
             <NavLink to="/portfolio" className={({ isActive }) => isActive ? "bm-item-active" : ""} onClick={closeMenu}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mr-[0.3rem]'/>{t("portfolio")}</NavLink>

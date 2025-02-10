@@ -56,7 +56,7 @@ export default function Head() {
             <header className={style.header}>
                 <div className={style.top}>
                     <button onClick={() => setIsOpen(true)} className={style.changeLanguage}>
-                        <PiTranslate className={style.icon} />
+                        <PiTranslate className={style.langIcon} />
                         {currentLanguage} {/* Display the current language name */}
                     </button>
                     <AnimatePresence>
@@ -71,12 +71,12 @@ export default function Head() {
                     </div>
                     <div className={style.right}>
                         <div className={style.buttons}>
-                            <button className={`${style.button}`}><PiCode className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("coding")}</button>
-                            <button className={style.button}><PiAperture className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("design")}</button>
-                            <button className={style.button}><PiChartDonut className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("promotion")}</button>
-                            <button className={style.button}><PiQrCode className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("portfolio")}</button>
-                            <button className={style.button}><PiBookBookmarkLight className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("articles")}</button>
-                            <button className={style.button}><PiMapPinSimpleArea className='text-[2.1rem] mb-[-0.4rem] mx-[0.3rem]' />{t("contacts")}</button>
+                            <button className={`${style.button}`}><PiCode className={style.buttonIcon} />{t("coding")}</button>
+                            <button className={style.button}><PiAperture className={style.buttonIcon} />{t("design")}</button>
+                            <button className={style.button}><PiChartDonut className={style.buttonIcon} />{t("promotion")}</button>
+                            <button className={style.button}><PiQrCode className={style.buttonIcon} />{t("portfolio")}</button>
+                            <button className={style.button}><PiBookBookmarkLight className={style.buttonIcon} />{t("articles")}</button>
+                            <button className={style.button}><PiMapPinSimpleArea className={style.buttonIcon} />{t("contacts")}</button>
                         </div>
                     </div>
                 </div>

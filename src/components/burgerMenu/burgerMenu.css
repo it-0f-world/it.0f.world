@@ -36,10 +36,12 @@
 }
 /* General sidebar styles */
 .bm-menu {
+  display: flex;
+  gap: 3px;
   position: relative;
   width: 21rem;
   background: #1f1f1f;
-  padding: 2.5em 1em 0;
+  padding: 1.5em .25em 0;
   font-size: 1.15em;
   top: 0;
 }
@@ -66,12 +68,16 @@
 }
 .bm-item a {
   display: flex;
-  padding: .32em 0;
+  padding: .32em 0 .32em .32em;
   color: white;
   filter: drop-shadow(2px 3px 2px #000000bd);
+  margin: 2px 0;
+  border: 1px solid transparent;
 }
 .bm-item a:hover {
   color: #20b8b6;
+  border: 1px solid #20b8b6b5;
+  border-radius: .75rem;
 }
 /* Styling of overlay */
 .bm-overlay {
@@ -79,10 +85,21 @@
 }
 .bm-item-active {
   color: #f69d35 !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: .75rem;
+  background-color:black;
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+.bm-item-active:hover {
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 .bm-logo {
   display: flex;
   width: 100%;
+}
+.bm-logo a, .bm-logo a:hover, .bm-address a {
+  border: none;
 }
 .bm-logo-image {
   width: 16rem;
@@ -101,6 +118,9 @@
 .bm-address a {
   font-family: "Montserrat";
   font-size: 1rem;
+}
+.bm-address a:hover {
+  border: none;
 }
 @media (min-width: 2300px) {
   .bm-burger-button {

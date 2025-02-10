@@ -30,8 +30,8 @@ const LanguageSelector = ({ onLanguageChange }) => {
             region: t("middleEastAndCentralAsia"),
             families: [
                 { id: 1, family: t("semitic"), languages: languages.filter(lang => ['ara', 'heb'].includes(lang.code)) },
-                { id: 2, family: t("iranian"), languages: languages.filter(lang => ['pes', 'pus'].includes(lang.code)) },
-                { id: 3, family: t("turkic"), languages: languages.filter(lang => lang.code === 'tur') },
+                { id: 2, family: t("iranian"), languages: languages.filter(lang => ['pes', 'pus', 'tgk'].includes(lang.code)) },
+                { id: 3, family: t("turkic"), languages: languages.filter(lang => ['tur', 'kaz', 'kir', 'uzb'].includes(lang.code)) },
             ]
         },
         {
