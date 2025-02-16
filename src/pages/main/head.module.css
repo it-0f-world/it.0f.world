@@ -30,13 +30,13 @@
     font-size: 1.6rem;
     background-color: transparent;
     margin-left: .5rem;
-    color: #344b86;
+    color: #20b8b6;
     margin-right: -2rem;
     margin-bottom: -1.5rem;
 }
 
 .closeModal:hover {
-    color: #da262e;
+    color: #344b86;
 }
 
 .container {

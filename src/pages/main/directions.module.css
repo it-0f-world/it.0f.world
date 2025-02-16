@@ -1,0 +1,14 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    overflow: hidden;
+}
+
+.textSlider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

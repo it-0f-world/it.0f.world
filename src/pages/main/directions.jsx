@@ -1,7 +1,109 @@
-export default function directions() {
+import React, { useState } from 'react';
+import './directions.css';
+import { useTranslation } from 'react-i18next';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectFade, EffectCube, Controller, Mousewheel, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/effect-cube';
+import 'swiper/css/controller';
+
+import SlideIMG1 from './media/cube/Image_1.jpg';
+import SlideIMG2 from './media/cube/Image_2.jpg';
+import SlideIMG3 from './media/cube/Image_3.jpg';
+import SlideIMG4 from './media/cube/Image_4.jpg';
+import SlideIMG5 from './media/cube/Image_5.jpg';
+import SlideIMG6 from './media/cube/Image_6.jpg';
+
+
+export default function Directions() {
+    const [textSlider, setTextSlider] = useState(null);
+    const [cubeSlider, setCubeSlider] = useState(null);
   return (
-    <div className='py-4 px-24'>
-        <p className="text-blue-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum ut sed inventore fuga libero pariatur explicabo possimus neque? Nobis molestias placeat saepe dolorem temporibus ducimus, quisquam nam repellat error! Fugiat sed saepe asperiores doloremque soluta sint nostrum veniam aliquid praesentium ullam rem totam dolorum alias est corrupti aperiam, sit iusto eos! Ea rerum maiores laudantium quis deleniti blanditiis! Ipsum odio fuga nesciunt. Beatae blanditiis laborum voluptas neque quis a pariatur expedita, voluptates assumenda. Aspernatur odit voluptatem voluptatibus quod iure nesciunt, labore doloremque ab sed totam dolore eaque ratione quia minima dignissimos rerum qui maiores reprehenderit. Sed cumque unde laudantium molestias similique. Sed, adipisci sunt quae quas rem enim necessitatibus voluptatum quos aliquid ullam nisi asperiores harum ab error velit quis impedit qui ratione iusto ducimus. Quisquam odit repellendus nihil voluptates accusantium officia reiciendis esse, corrupti sint, fugit exercitationem doloremque ea alias accusamus, ex iusto sapiente natus deleniti atque reprehenderit error voluptatum quis? Delectus, corrupti nesciunt doloremque aut autem voluptatibus animi aperiam magni ex ducimus officia odit similique nihil eos tenetur soluta nemo in nobis veniam ipsam quo ullam ipsa veritatis! Sunt cumque vero praesentium necessitatibus ipsa minus magni consectetur repellendus beatae, optio doloribus libero aliquid possimus? Autem debitis recusandae deleniti quod dolore cumque omnis, hic nisi accusantium ad esse quibusdam minima soluta modi impedit sint praesentium numquam quidem. Similique nam quidem incidunt quas aliquid ipsa, deserunt, fugit ratione reprehenderit accusamus officiis sequi quasi! Soluta odit tenetur modi ullam similique animi unde commodi officiis repellendus corporis totam laboriosam optio quam beatae, harum quo aliquam ut in vel? Inventore maiores nostrum blanditiis dicta? Commodi animi consectetur fugiat aperiam recusandae rem praesentium laudantium sit illo itaque? Cupiditate doloribus laboriosam neque at iste porro aperiam ipsum illo ratione inventore eaque, quas reprehenderit sequi ea dignissimos quae rerum vitae delectus dolor vel error pariatur hic expedita! Architecto rem tenetur perspiciatis natus soluta voluptatum sapiente. In, qui placeat? Laudantium natus velit soluta libero eos placeat facilis nihil facere alias? Nesciunt porro dolorem deleniti asperiores, recusandae praesentium a incidunt commodi!</p>
-    </div>
+    <section className='wrapperCubeSlider'>
+      <Swiper
+        className='textSlider'
+        modules={[EffectFade, Controller, Mousewheel, Autoplay]}
+        onSwiper={(swiper) => setTextSlider(swiper)}
+        controller={cubeSlider ? { control: cubeSlider } : {}}
+        effect='fade'
+        loop
+        speed={1000}
+        mousewheel
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: true,
+          pauseOnMouseEnter: true,
+        }}
+      >
+        <SwiperSlide>
+          <h2>Cross-platform applications programming. Web, Desktop, mobile. For all operating systems.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis neque quaerat illum explicabo dicta et obcaecati asperiores, in, tempore aspernatur nihil veniam a. Accusantium error id libero, repellendus possimus minus et laborum?</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <h2>Business processes automation with CRM and CMS</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis neque quaerat illum explicabo dicta et obcaecati asperiores, in, tempore aspernatur nihil veniam a. Accusantium error id libero, repellendus possimus minus et laborum?</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <h2>Blockchain and payments integration.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis neque quaerat illum explicabo dicta et obcaecati asperiores, in, tempore aspernatur nihil veniam a. Accusantium error id libero, repellendus possimus minus et laborum?</p>
+        </SwiperSlide>
+        <SwiperSlide>
+          <h2>Industrial automatization. Factory robot’s setup.</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis neque quaerat illum explicabo dicta et obcaecati asperiores, in, tempore aspernatur nihil veniam a. Accusantium error id libero, repellendus possimus minus et laborum?</p>
+        </SwiperSlide>
+      </Swiper>
+
+      <Swiper
+        className='cubeSlider'
+        modules={[EffectCube, Controller, Mousewheel]}
+        onSwiper={(swiper) => setCubeSlider(swiper)}
+        controller={textSlider ? { control: textSlider } : {}}
+        effect='cube'
+        grabCursor
+        loop
+        speed={1000}
+        mousewheel
+        cubeEffect={{
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 60,
+          shadowScale: 0.94,
+        }}
+        breakpoints={{
+          //when window width is >= 300px
+          300: {
+            cubeEffect: {
+              shadowOffset: 16,
+            }
+          },
+          //when window width is >= 600px
+          600: {
+            cubeEffect: {
+              shadowOffset: 36,
+            }
+          },
+          //when window width is >= 1200px
+          1200: {
+            cubeEffect: {
+              shadowOffset: 44,
+            }
+          },
+        }}
+      >
+        <SwiperSlide>
+          <img src={SlideIMG1} alt="Slide 1" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={SlideIMG2} alt="Slide 2" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={SlideIMG3} alt="Slide 3" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={SlideIMG4} alt="Slide 4" />
+        </SwiperSlide>
+      </Swiper>
+    </section>
   )
 }
