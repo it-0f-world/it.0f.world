@@ -10,6 +10,9 @@ import 'swiper/css/controller';
 import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from "react-icons/md";
 
 import CrossPlatformApplications from './cube/crossPlatformApplications';
+import BusinessAutomation from './cube/businessAutomation';
+import Blockchain from './cube/blockchain';
+import IndustrialAutomatization from './cube/industrialAutomatization';
 
 import SlideIMG1 from './media/cube/Image_1.jpg';
 import SlideIMG2 from './media/cube/Image_2.jpg';
@@ -33,7 +36,7 @@ export default function Directions() {
   return (
     <div className={style.wrapper}>
       <div className={style.head}>
-        <code><span style={{ color: '#e06c75' }}>let</span>.<span style={{ color: '#4fafe3' }}>be</span>(application)<span style={{ color: '#a878dd' }}> *= </span>{'{'}<span style={{ color: '#98c379' }}>for </span><span style={{ color: '#56b6c2' }}>Business </span>&& <span style={{ color: '#56b6c2' }}>Industry</span> :: <span style={{ color: '#e5c07b' }}>usersHappiness</span>{'}'}<span style={{ color: '#5c6370' }}> //applications for all devices</span></code>
+        <code><span style={{ color: '#e06c75' }}>let</span>.<span style={{ color: '#4fafe3' }}>be</span>(application)<span style={{ color: '#a878dd' }}> *= </span>{'{'}<span style={{ color: '#98c379' }}>for </span><span style={{ color: '#56b6c2' }}>Business </span>&& <span style={{ color: '#56b6c2' }}>Industry</span> :: <span style={{ color: '#e5c07b' }}>usersHappiness</span>{'}'}<span style={{ color: '#5c6370' }}> //computer applications for all purposes</span></code>
       </div>
       <h2 className={style.header}>Computer programming directions</h2>
       <section className={style.container}>
@@ -57,16 +60,13 @@ export default function Directions() {
             <CrossPlatformApplications />
           </SwiperSlide>
           <SwiperSlide>
-            <h2>Business processes automation with CRM and CMS</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis neque quaerat illum explicabo dicta et obcaecati asperiores, in, tempore aspernatur nihil veniam a. Accusantium error id libero, repellendus possimus minus et laborum?</p>
+            <BusinessAutomation />
           </SwiperSlide>
           <SwiperSlide>
-            <h2>Blockchain and payments integration.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis neque quaerat illum explicabo dicta et obcaecati asperiores, in, tempore aspernatur nihil veniam a. Accusantium error id libero, repellendus possimus minus et laborum?</p>
+            <Blockchain />
           </SwiperSlide>
           <SwiperSlide>
-            <h2>Industrial automatization. Factory robot’s setup.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis debitis neque quaerat illum explicabo dicta et obcaecati asperiores, in, tempore aspernatur nihil veniam a. Accusantium error id libero, repellendus possimus minus et laborum?</p>
+            <IndustrialAutomatization />
           </SwiperSlide>
         </Swiper>
         <button className={style.navButton} onClick={handleNextSlide}>

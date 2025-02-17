@@ -14,7 +14,7 @@
     grid-template-columns: 1% 62% 1% 36%;
     place-items: center;
     gap: .5rem;
-    padding: 2rem 6rem 3rem;
+    padding: 2rem;
     overflow: visible;
 }
 
