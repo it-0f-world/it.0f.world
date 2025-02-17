@@ -1,7 +1,8 @@
-.wrapper {
-    
-}
-
 .header {
     font-size: 2rem;
+}
+
+.container {
+    display: flex;
+    flex: 1;
 }
