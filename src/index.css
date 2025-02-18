@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+/* Custom classes if they're not available in your version of Tailwind */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* If you need a rotate-y-180 utility */
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
