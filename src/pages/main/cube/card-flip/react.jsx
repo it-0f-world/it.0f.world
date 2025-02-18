@@ -1,22 +1,35 @@
-import React from 'react'
+import React from 'react';
 
-const cardFlipReact = () => {
+const CardFlipReact = () => {
     return (
-        <div className='w-full h-full flex place-content-center'>
-            <div className='w-60 bg-transparent cursor-pointer group rounded-2xl perspective-1000'>
-                <div className='flex relative w-full h-full duration-500 preserve-3d group-hover:rotate-y-180 transform-style-preserve-3d'>
-                    <div className='w-full h-full absolute rounded-2xl overflow-hidden p-3 border border-[#4fafe3] bg-[rgba(0,0,0,0.4)]'>
-                        <h3 className='text-3xl text-center'>Core</h3>
-                        <p className='pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, suscipit?</p>
+        <div className="w-full h-full flex justify-center items-center">
+            {/* Outer container with perspective */}
+            <div className="w-60 h-full bg-transparent cursor-pointer group rounded-2xl perspective-1000">
+                {/* Card wrapper with 3D transform */}
+                <div
+                    className="w-full h-full duration-500 transform transition-transform group-hover:rotate-y-180"
+                    style={{ transformStyle: 'preserve-3d' }}
+                >
+                    {/* Front side */}
+                    <div
+                        className="w-full h-full absolute rounded-2xl overflow-hidden p-3 border border-[#4fafe3] bg-[rgba(0,0,0,0.4)] backface-hidden"
+                        style={{ transform: 'rotateY(0deg)' }}
+                    >
+                        <h3 className="text-3xl text-center">Core</h3>
+                        <p className="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, suscipit?</p>
                     </div>
-                    <div className='w-full h-full absolute rounded-2xl rotate-y-180 overflow-hidden bg-[#6b00dd] space-y-5 p-3 bg-opacity-95 backface-hidden  border border-[#4fafe3]'>
-                        <h3 className='text-3xl text-center'>React</h3>
-                        <p className='pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, suscipit?</p>
+                    {/* Back side */}
+                    <div
+                        className="w-full h-full absolute rounded-2xl overflow-hidden p-3 border border-[#4fafe3] bg-[#6b00dd] bg-opacity-95 backface-hidden"
+                        style={{ transform: 'rotateY(180deg)' }}
+                    >
+                        <h3 className="text-3xl text-center">React</h3>
+                        <p className="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, suscipit?</p>
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default cardFlipReact
+export default CardFlipReact;

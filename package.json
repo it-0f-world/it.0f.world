@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -50,7 +51,11 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+    "npm-force-resolutions": "^0.0.10",
     "tailwindcss": "^4.0.6",
     "vite": "^6.0.5"
+  },
+  "resolutions": {
+    "esbuild": "^0.25"
   }
 }
