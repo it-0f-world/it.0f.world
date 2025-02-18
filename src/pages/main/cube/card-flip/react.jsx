@@ -4,7 +4,9 @@ const CardFlipReact = () => {
     return (
         <div className="w-full h-full flex justify-center items-center">
             {/* Outer container with perspective */}
-            <div className="w-60 h-full bg-transparent cursor-pointer group rounded-2xl perspective-1000">
+            <div className="w-60 h-full bg-transparent cursor-pointer group rounded-2xl perspective-1000"
+                style={{ perspective: '1000px' }}
+            >
                 {/* Card wrapper with 3D transform */}
                 <div
                     className="w-full h-full duration-500 transform transition-transform group-hover:rotate-y-180"
