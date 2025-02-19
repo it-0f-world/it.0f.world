@@ -1,4 +1,5 @@
 import React from 'react';
+import { RiReactjsLine } from "react-icons/ri";
 
 const CardFlipReact = () => {
     return (
@@ -17,8 +18,15 @@ const CardFlipReact = () => {
                         className="w-full h-full absolute rounded-2xl overflow-hidden p-3 border border-[#4fafe3] bg-[rgba(0,0,0,0.4)] backface-hidden"
                         style={{ transform: 'rotateY(0deg)' }}
                     >
-                        <h3 className="text-3xl text-center">Core</h3>
-                        <p className="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, suscipit?</p>
+                        <div className="relative flex items-center py-1">
+                            <RiReactjsLine className="flex-shrink-0 text-3xl" />
+                            <h3 className="text-3xl absolute left-1/2 transform -translate-x-1/2">Core</h3>
+                        </div>
+                        <ul>
+                        <li className="pt-2 text-justify text-[14px]"><span className='font-bold'>React Document Object Model</span> enables the same logic and components to be reused for web applications, ensuring consistency in user experience across platforms.</li>
+                            <li className="pt-1 text-justify text-[14px]"><span className='font-bold'>React Native </span>allows developers to share up to 90% of their code between iOS and Android.</li>
+                            <li className="pt-1 text-justify text-[14px]"><span className='font-bold'>ElectronJS </span>embeds Chromium and Node.js to enable web developers to create desktop applications.</li>
+                        </ul>
                     </div>
                     {/* Back side */}
                     <div
