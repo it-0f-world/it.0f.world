@@ -13,9 +13,16 @@
   backface-visibility: hidden;
 }
 
-/* If you need a rotate-y-180 utility */
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+.font-roboto {
+  font-family: 'Roboto';
+}
+
+.font-rubik {
+  font-family: 'Rubik';
 }
 
 :root {
@@ -42,7 +49,7 @@ h1, h2, h3, h4, h5, h6, button {
 }
 
 p {
-  font-family: "JetBrains Mono";
+  font-family: "Rubik";
   margin: 0;
 }
 
@@ -53,6 +60,10 @@ a {
 }
 a:hover {
   color: #535bf2;
+}
+
+code {
+  font-family: "JetBrains Mono";
 }
 
 body {

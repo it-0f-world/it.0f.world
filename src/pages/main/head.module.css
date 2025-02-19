@@ -177,7 +177,7 @@
 }
 
 .title h1,
-.description p {
+.description code {
     filter: drop-shadow(2px 3px 2px #000000);
 }
 

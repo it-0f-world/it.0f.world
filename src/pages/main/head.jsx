@@ -67,7 +67,7 @@ export default function Head() {
                     <div className={style.left} />
                     <div className={style.slogan}>
                         <h1 className={style.title}>{t("mainHeadTitle")}</h1>
-                        <p className={style.description}>{t("mainHeadDescription")}</p>
+                        <code className={style.description}>{t("mainHeadDescription")}</code>
                     </div>
                     <div className={style.right}>
                         <div className={style.buttons}>
