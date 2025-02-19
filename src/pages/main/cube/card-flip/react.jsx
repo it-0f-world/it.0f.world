@@ -22,11 +22,9 @@ const CardFlipReact = () => {
                             <RiReactjsLine className="flex-shrink-0 text-3xl" />
                             <h3 className="text-3xl absolute left-1/2 transform -translate-x-1/2">Core</h3>
                         </div>
-                        <ul>
-                        <li className="pt-2 text-justify text-[14px]"><span className='font-bold'>React Document Object Model</span> enables the same logic and components to be reused for web applications, ensuring consistency in user experience across platforms.</li>
-                            <li className="pt-1 text-justify text-[14px]"><span className='font-bold'>React Native </span>allows developers to share up to 90% of their code between iOS and Android.</li>
-                            <li className="pt-1 text-justify text-[14px]"><span className='font-bold'>ElectronJS </span>embeds Chromium and Node.js to enable web developers to create desktop applications.</li>
-                        </ul>
+                        <p className='pt-2 text-justify text-[12px]'>Whether you're building a simple utility app or a complex enterprise solution, React provides the flexibility needed to grow your application over time. Features like modular architecture, componentization, and state management ensure that your application remains maintainable and extensible.</p>
+                        <p className='pt-1 text-justify text-[12px]'>React Native compiles to native code, ensuring high performance similar to native Swift (iOS) and Kotlin (Android) applications. It uses a bridge to interact with native components, giving it a smooth and responsive feel.</p>
+                        <p className='pt-1 text-justify text-[12px]'>We build with React.js Progressive Web Apps (PWAs), which provide app-like experiences on any device without requiring installation from an app store.</p>
                     </div>
                     {/* Back side */}
                     <div
@@ -34,7 +32,11 @@ const CardFlipReact = () => {
                         style={{ transform: 'rotateY(180deg)' }}
                     >
                         <h3 className="text-3xl text-center">React</h3>
-                        <p className="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, suscipit?</p>
+                        <ul>
+                            <li className="pt-2 text-justify text-[12px]"><span className='font-bold'>ReactJS Document Object Model</span> enables the same logic and components to be reused for web applications, ensuring consistency in user experience across platforms.</li>
+                            <li className="pt-1 text-justify text-[12px]"><span className='font-bold'>React Native </span>allows developers to share up to 90% of their code between iOS and Android.</li>
+                            <li className="pt-1 text-justify text-[12px]"><span className='font-bold'>ElectronJS </span>embeds Chromium and Node.js to enable web developers to create desktop applications.</li>
+                        </ul>
                     </div>
                 </div>
             </div>

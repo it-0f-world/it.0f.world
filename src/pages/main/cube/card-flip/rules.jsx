@@ -11,7 +11,11 @@ const cardFlipRules = () => {
                             <RiCodeSSlashFill className="flex-shrink-0 text-3xl" />
                             <h3 className="text-3xl absolute left-1/2 transform -translate-x-1/2">Rules</h3>
                         </div>
-                        <p className='pt-2 text-justify text-[12px]'>We develop our software only for latest versions of web-browsers and operating systems at the time of development.</p>
+                        <ul>
+                            <li className="pt-2 text-justify text-[12px]">Single codebase that works across platforms.</li>
+                            <li className="pt-1 text-justify text-[12px]">Team specializing in one technologie.</li>
+                            <li className="pt-1 text-justify text-[12px]">Development our software only for latest versions of web-browsers and operating systems at the time of development.</li>
+                        </ul>
                     </div>
                     <div className='w-full h-full absolute rounded-2xl rotate-y-180 overflow-hidden bg-[#97c100] space-y-5 p-3 bg-opacity-95 backface-hidden  border border-[#c68c4b]'>
                         <h3 className='text-3xl text-center'>List of Rules</h3>
